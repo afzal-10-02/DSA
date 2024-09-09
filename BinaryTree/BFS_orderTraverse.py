@@ -2,7 +2,7 @@ from _BinaryTree import BinaryTree
 from collections import deque
 
 #BFS Order traversal using the que.
-def BFS_order_Traversal(root):
+def level_order_Traversal(root) -> list[int]:
     #Base case empty root.
     if not root:
         return []
@@ -27,6 +27,35 @@ def BFS_order_Traversal(root):
     
     return li
 
+def level_order_traversal_1(root) -> list[list[int]]:
+    #Base Case if tree is None.
+    if not root:
+        return []
+
+    #Initializing the Deque and the list to store the result.
+    que = deque([root])
+    li = []
+
+    #loop while que.
+    while que:
+        length = len(que)
+        
+        #list to store the level result 
+        l = []
+
+        for i in range(length):
+            node = que.popleft()
+            l.append(node.val)
+            
+            #Adding node to the que if if left and rigth is not Null
+            if node.left:
+                que.append(node.left)
+            if node.right:
+                que.append(node.right)
+        li.append(l)
+    return li
+    
+
 
 #Example 
 
@@ -39,4 +68,5 @@ root.right.left = BinaryTree(6)
 root.right.right = BinaryTree(7)
 
 
-print(BFS_order_Traversal(root))
+print(level_order_Traversal(root))
+print(level_order_traversal_1(root))
