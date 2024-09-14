@@ -11,5 +11,5 @@ def BubbleSort(arr):
 array = [1,2,1,5,6,7,4,3,2,1]
 sorted_array = BubbleSort(array)
 
-#Print the Sorted array
+#Print the Sorted Array
 print(f'Sorted Array is : {sorted_array}')
