@@ -15,5 +15,5 @@ def QuickSort(arr):
 array = [2,4,1,2,7,8,9,6,5,4,3,3,1,-3,-6]
 sorted_array = QuickSort(array)
 
-#Print the sorted array
+#Print the sorted Array
 print(f'Sorted Array is : {sorted_array}')
