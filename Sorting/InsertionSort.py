@@ -11,5 +11,9 @@ def InsertionSort(arr):
                 break
     return arr
 
-print(InsertionSort([3,4,2,1,9,0,-2,-1]))
-    
+#Example 
+array = [3,4,2,1,9,0,-2,-1]
+sorted_array = InsertionSort(array)
+
+#Print the Sorted Array
+print(f'Sorted Array is : {sorted_array}')

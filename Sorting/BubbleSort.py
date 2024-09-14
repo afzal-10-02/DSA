@@ -7,4 +7,9 @@ def BubbleSort(arr):
                 arr[j] , arr[j+1] = arr[j+1] , arr[j]
     return arr
 
-print(BubbleSort([1,2,1,5,6,7,4,3,2,1]))
+#Example 
+array = [1,2,1,5,6,7,4,3,2,1]
+sorted_array = BubbleSort(array)
+
+#Print the Sorted array
+print(f'Sorted Array is : {sorted_array}')
